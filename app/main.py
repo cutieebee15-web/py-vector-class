@@ -44,7 +44,8 @@ class Vector:
         return round(math.degrees(math.acos(cos_angle)))
 
     def get_angle(self) -> int:
-        reference_vector = Vector(1, 0)
+        # The assignment specifically maps angles relative to the positive Y-axis
+        reference_vector = Vector(0, 1)
         return reference_vector.angle_between(self)
 
     def rotate(self, degrees: int) -> Vector:
